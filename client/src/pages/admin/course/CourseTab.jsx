@@ -75,7 +75,7 @@ const CourseTab = () => {
   const [editCourse, { data, isSuccess, isError, error, isLoading }] =
     useEditCourseMutation();
 
-   //   for input(type=text) tags
+  //   for input(type=text) tags
   const changeEventHandler = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
@@ -101,12 +101,11 @@ const CourseTab = () => {
     }
   };
 
- // fileReader.onloadend = ... sets up a callback — what should happen after reading is done.
+  // fileReader.onloadend = ... sets up a callback — what should happen after reading is done.
 
- // fileReader.readAsDataURL(file) kicks off the async file reading.
+  // fileReader.readAsDataURL(file) kicks off the async file reading.
 
- //  If you call readAsDataURL() before setting onloadend, your callback might never get called because the reading could finish before the handler is attached
-
+  // 	If you call readAsDataURL() before setting onloadend, your callback might never get called because the reading could finish before the handler is attached
 
   const updateCourseHandler = async () => {
     const formData = new FormData();
@@ -143,21 +142,21 @@ const CourseTab = () => {
 
   if (courseByIdLoading)
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <Loader2 className="h-8 w-8 animate-spin text-MentivPurple" />
+      <div className="flex items-center justify-center min-h-screen p-4 sm:p-8">
+        <Loader2 className="h-8 w-8 sm:h-10 sm:w-10 animate-spin text-MentivPurple" />
       </div>
     );
 
   return (
-    <Card>
-      <CardHeader className="flex flex-row justify-between items-start">
-        <div>
-          <CardTitle>Basic Course Information</CardTitle>
-          <CardDescription>
+    <Card className="mx-4 sm:mx-6 lg:mx-0 w-full lg:max-w-6xl xl:max-w-7xl">
+      <CardHeader className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 sm:gap-6 p-4 sm:p-6">
+        <div className="w-full sm:w-auto">
+          <CardTitle className="text-lg sm:text-xl lg:text-2xl">Basic Course Information</CardTitle>
+          <CardDescription className="text-sm sm:text-base">
             Make changes to your course here. Click save when you are done.
           </CardDescription>
         </div>
-        <div className="space-x-2">
+        <div className="flex flex-col sm:flex-row gap-2 sm:space-x-2 space-y-2 sm:space-y-0 w-full sm:w-auto">
           <Button
             variant="outline"
             disabled={courseByIdData?.course.lectures.length === 0}
@@ -168,22 +167,22 @@ const CourseTab = () => {
             }
             className={
               courseByIdData?.course.isPublished
-                ? "border-orange-500 text-orange-600 hover:bg-orange-50 hover:text-orange-600 dark:hover:bg-orange-950 dark:border-orange-400 dark:text-orange-400"
-                : "border-green-500 text-green-600 hover:bg-green-50 hover:text-green-600 dark:hover:bg-green-950 dark:border-green-400 dark:text-green-400"
+                ? "border-orange-500 text-orange-600 hover:bg-orange-50 hover:text-orange-600 dark:hover:bg-orange-950 dark:border-orange-400 dark:text-orange-400 w-full sm:w-auto"
+                : "border-green-500 text-green-600 hover:bg-green-50 hover:text-green-600 dark:hover:bg-green-950 dark:border-green-400 dark:text-green-400 w-full sm:w-auto"
             }
           >
             {courseByIdData?.course.isPublished ? "Unpublish" : "Publish"}
           </Button>
-          <Button variant="destructive" className="gap-2">
+          <Button variant="destructive" className="gap-2 w-full sm:w-auto">
             <Trash2 className="h-4 w-4" />
             Remove Course
           </Button>
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="p-4 sm:p-6 lg:p-8 space-y-6">
         {/* Course Title */}
         <div className="space-y-2">
-          <Label htmlFor="courseTitle">Course Title *</Label>
+          <Label htmlFor="courseTitle" className="text-sm sm:text-base">Course Title *</Label>
           <Input
             id="courseTitle"
             type="text"
@@ -191,13 +190,14 @@ const CourseTab = () => {
             value={input.courseTitle}
             onChange={changeEventHandler}
             placeholder="Ex. Complete Web Development Bootcamp"
+            className="text-sm sm:text-base h-11 sm:h-12"
             required
           />
         </div>
 
         {/* Subtitle */}
         <div className="space-y-2">
-          <Label htmlFor="subTitle">Subtitle *</Label>
+          <Label htmlFor="subTitle" className="text-sm sm:text-base">Subtitle *</Label>
           <Input
             id="subTitle"
             type="text"
@@ -205,23 +205,24 @@ const CourseTab = () => {
             value={input.subTitle}
             onChange={changeEventHandler}
             placeholder="Ex. Become a full-stack developer from zero to hero in 3 months"
+            className="text-sm sm:text-base h-11 sm:h-12"
             required
           />
         </div>
 
         {/* Description */}
         <div className="space-y-2">
-          <Label>Description *</Label>
+          <Label className="text-sm sm:text-base">Description *</Label>
           <RichTextEditor input={input} setInput={setInput} />
         </div>
 
         {/* Category, Level, and Price Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Category */}
           <div className="space-y-2">
-            <Label htmlFor="category">Category *</Label>
+            <Label htmlFor="category" className="text-sm sm:text-base">Category *</Label>
             <Select value={input.category} onValueChange={selectCategory}>
-              <SelectTrigger id="category">
+              <SelectTrigger id="category" className="h-11 sm:h-12 text-sm sm:text-base">
                 <SelectValue placeholder="Select category" />
               </SelectTrigger>
               <SelectContent>
@@ -239,9 +240,9 @@ const CourseTab = () => {
 
           {/* Course Level */}
           <div className="space-y-2">
-            <Label htmlFor="courseLevel">Course Level *</Label>
+            <Label htmlFor="courseLevel" className="text-sm sm:text-base">Course Level *</Label>
             <Select value={input.courseLevel} onValueChange={selectCourseLevel}>
-              <SelectTrigger id="courseLevel">
+              <SelectTrigger id="courseLevel" className="h-11 sm:h-12 text-sm sm:text-base">
                 <SelectValue placeholder="Select level" />
               </SelectTrigger>
               <SelectContent>
@@ -259,7 +260,7 @@ const CourseTab = () => {
 
           {/* Price */}
           <div className="space-y-2">
-            <Label htmlFor="coursePrice">Price (INR) *</Label>
+            <Label htmlFor="coursePrice" className="text-sm sm:text-base">Price (INR) *</Label>
             <Input
               id="coursePrice"
               type="number"
@@ -268,6 +269,7 @@ const CourseTab = () => {
               onChange={changeEventHandler}
               placeholder="999"
               min="0"
+              className="text-sm sm:text-base h-11 sm:h-12"
               required
             />
           </div>
@@ -275,22 +277,22 @@ const CourseTab = () => {
 
         {/* Course Thumbnail */}
         <div className="space-y-2">
-          <Label htmlFor="thumbnail">Course Thumbnail *</Label>
+          <Label htmlFor="thumbnail" className="text-sm sm:text-base">Course Thumbnail *</Label>
           <Input
             id="thumbnail"
             type="file"
             accept="image/*"
             onChange={selectThumbnail}
-            className="cursor-pointer w-fit"
+            className="cursor-pointer w-full sm:w-fit text-sm"
           />
           {previewThumbnail && (
             <div className="mt-4">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2">
                 Preview:
               </p>
               <img
                 src={previewThumbnail}
-                className="w-64 h-36 object-cover rounded-lg border-2 border-gray-200 dark:border-gray-700"
+                className="w-full sm:w-64 h-32 sm:h-36 object-cover rounded-lg border-2 border-gray-200 dark:border-gray-700 max-w-full"
                 alt="Course Thumbnail Preview"
               />
             </div>
@@ -298,18 +300,19 @@ const CourseTab = () => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-3 pt-4">
+        <div className="flex flex-col sm:flex-row gap-3 pt-4">
           <Button
             type="button"
             variant="outline"
             onClick={() => navigate("/admin/course")}
+            className="w-full sm:w-auto"
           >
             Cancel
           </Button>
           <Button
             disabled={isLoading}
             onClick={updateCourseHandler}
-            className="bg-MentivPurple hover:bg-MentivPurple/90"
+            className="bg-MentivPurple hover:bg-MentivPurple/90 w-full sm:w-auto"
           >
             {isLoading ? (
               <>
