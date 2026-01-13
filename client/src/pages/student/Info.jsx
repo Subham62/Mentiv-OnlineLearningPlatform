@@ -1,8 +1,8 @@
 import React from "react";
-import { 
-  Book, 
-  Users, 
-  Award, 
+import {
+  Book,
+  Users,
+  Award,
   Globe,
   Shield,
   FileText,
@@ -22,7 +22,7 @@ import {
   DollarSign,
   Video,
   HeadphonesIcon,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -42,11 +42,12 @@ const InfoPage = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
-        
         {/* MENTIV SECTION */}
         <section id="mentiv">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Mentiv</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              About Mentiv
+            </h2>
             <div className="w-20 h-1 bg-MentivPurple"></div>
           </div>
 
@@ -60,32 +61,49 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent className="prose dark:prose-invert max-w-none">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Mentiv is a leading online learning platform dedicated to democratizing education and making 
-                quality learning accessible to everyone, everywhere. Founded with the vision to bridge the gap 
-                between knowledge seekers and expert educators, we've grown into a vibrant community of learners 
-                and instructors from around the world.
+                Mentiv is a roadmap-first learning platform built to solve a
+                critical problem in online education — learners often don’t know
+                what to study, in what order, or how their learning connects to
+                real career goals. Instead of overwhelming students with endless
+                course options, Mentiv provides clear, structured learning paths
+                designed around industry roles.
               </p>
+
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Our platform hosts thousands of courses across diverse fields including technology, business, 
-                design, marketing, and personal development. Whether you're a beginner starting your learning 
-                journey or a professional looking to upskill, Mentiv provides the tools, resources, and 
-                community support you need to succeed.
+                Each roadmap breaks complex skills into step-by-step milestones,
+                guiding learners on exactly what to learn next and why it
+                matters. It provides curated courses, visual progress tracking,
+                and goal-oriented learning, Mentiv transforms random course
+                consumption into a focused, career-driven learning journey.
               </p>
+
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <Users className="w-12 h-12 text-MentivPurple mx-auto mb-3" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">100+</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Active Learners</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    “Learners actively following structured roadmaps”
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Active Learners
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <Book className="w-12 h-12 text-MentivPurple mx-auto mb-3" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">10+</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Quality Courses</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    “Curated courses aligned with roadmap milestones”
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Quality Courses
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <Award className="w-12 h-12 text-MentivPurple mx-auto mb-3" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">5+</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Expert Instructors</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    “Educators focused on practical, outcome-driven learning”
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Expert Instructors
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -102,11 +120,17 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  For press inquiries, media partnerships, or interview requests, please contact our 
-                  communications team.
+                  For press inquiries, media partnerships, or interview
+                  requests, please contact our communications team.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Email: <a href="mailto:press@mentiv.com" className="text-MentivPurple hover:underline">press@mentiv.com</a>
+                  Email:{" "}
+                  <a
+                    href="mailto:press@mentiv.com"
+                    className="text-MentivPurple hover:underline"
+                  >
+                    press@mentiv.com
+                  </a>
                 </p>
               </CardContent>
             </Card>
@@ -120,11 +144,18 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Join our team and help shape the future of online education. We're always looking for 
-                  talented individuals passionate about learning.
+                  Join our team and help shape the future of online education.
+                  We're always looking for talented individuals passionate about
+                  learning.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Email: <a href="mailto:careers@mentiv.com" className="text-MentivPurple hover:underline">careers@mentiv.com</a>
+                  Email:{" "}
+                  <a
+                    href="mailto:careers@mentiv.com"
+                    className="text-MentivPurple hover:underline"
+                  >
+                    careers@mentiv.com
+                  </a>
                 </p>
               </CardContent>
             </Card>
@@ -141,8 +172,9 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Need assistance? Our help center provides comprehensive guides, FAQs, and troubleshooting 
-                  resources to help you get the most out of Mentiv.
+                  Need assistance? Our help center provides comprehensive
+                  guides, FAQs, and troubleshooting resources to help you get
+                  the most out of Mentiv.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-center gap-2">
@@ -170,14 +202,27 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Have questions? Our support team is here to help you succeed on your learning journey.
+                  Have questions? Our support team is here to help you succeed
+                  on your learning journey.
                 </p>
                 <div className="space-y-3 text-gray-600 dark:text-gray-400">
                   <p>
-                    <strong>Email:</strong> <a href="mailto:support@mentiv.com" className="text-MentivPurple hover:underline">support@mentiv.com</a>
+                    <strong>Email:</strong>{" "}
+                    <a
+                      href="mailto:support@mentiv.com"
+                      className="text-MentivPurple hover:underline"
+                    >
+                      support@mentiv.com
+                    </a>
                   </p>
                   <p>
-                    <strong>Phone:</strong> <a href="tel:+919876543210" className="text-MentivPurple hover:underline">+91 98765 43210</a>
+                    <strong>Phone:</strong>{" "}
+                    <a
+                      href="tel:+919876543210"
+                      className="text-MentivPurple hover:underline"
+                    >
+                      +91 98765 43210
+                    </a>
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
@@ -192,7 +237,9 @@ const InfoPage = () => {
         {/* TEACH SECTION */}
         <section id="teach">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Teach on Mentiv</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Teach on Mentiv
+            </h2>
             <div className="w-20 h-1 bg-MentivPurple"></div>
           </div>
 
@@ -206,28 +253,35 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Share your expertise with millions of learners worldwide. Whether you're an industry expert, 
-                academic professional, or passionate educator, Mentiv provides the platform and tools you need 
-                to create impactful courses and build your brand.
+                Share your expertise with millions of learners worldwide.
+                Whether you're an industry expert, academic professional, or
+                passionate educator, Mentiv provides the platform and tools you
+                need to create impactful courses and build your brand.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <DollarSign className="w-10 h-10 text-MentivPurple mb-4" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Earn Revenue</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    Earn Revenue
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400">
                     Get paid for your expertise with competitive revenue sharing
                   </p>
                 </div>
                 <div className="p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <Users className="w-10 h-10 text-MentivPurple mb-4" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Global Reach</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    Global Reach
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400">
                     Reach students from over 150 countries worldwide
                   </p>
                 </div>
                 <div className="p-6 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
                   <TrendingUp className="w-10 h-10 text-MentivPurple mb-4" />
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Build Your Brand</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                    Build Your Brand
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400">
                     Establish yourself as an industry thought leader
                   </p>
@@ -247,7 +301,8 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Access comprehensive resources to help you create engaging, high-quality courses.
+                  Access comprehensive resources to help you create engaging,
+                  high-quality courses.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-center gap-2">
@@ -279,17 +334,27 @@ const InfoPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Transparent pricing with no hidden fees. You focus on teaching, we handle the rest.
+                  Transparent pricing with no hidden fees. You focus on
+                  teaching, we handle the rest.
                 </p>
                 <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                   <li>
-                    <strong className="text-gray-900 dark:text-white">Revenue Share:</strong> 70% instructor, 30% platform
+                    <strong className="text-gray-900 dark:text-white">
+                      Revenue Share:
+                    </strong>{" "}
+                    70% instructor, 30% platform
                   </li>
                   <li>
-                    <strong className="text-gray-900 dark:text-white">No Upfront Costs:</strong> Free to create and publish courses
+                    <strong className="text-gray-900 dark:text-white">
+                      No Upfront Costs:
+                    </strong>{" "}
+                    Free to create and publish courses
                   </li>
                   <li>
-                    <strong className="text-gray-900 dark:text-white">Monthly Payouts:</strong> Receive earnings via bank transfer
+                    <strong className="text-gray-900 dark:text-white">
+                      Monthly Payouts:
+                    </strong>{" "}
+                    Receive earnings via bank transfer
                   </li>
                 </ul>
               </CardContent>
@@ -306,21 +371,33 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Earn commission by promoting Mentiv courses. Join our affiliate program and get rewarded 
-                for every student you refer.
+                Earn commission by promoting Mentiv courses. Join our affiliate
+                program and get rewarded for every student you refer.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-4">
                 <div className="text-center p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                  <p className="text-2xl font-bold text-MentivPurple mb-1">10%</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Commission Rate</p>
+                  <p className="text-2xl font-bold text-MentivPurple mb-1">
+                    10%
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Commission Rate
+                  </p>
                 </div>
                 <div className="text-center p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                  <p className="text-2xl font-bold text-MentivPurple mb-1">90 Days</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Cookie Duration</p>
+                  <p className="text-2xl font-bold text-MentivPurple mb-1">
+                    90 Days
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Cookie Duration
+                  </p>
                 </div>
                 <div className="text-center p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                  <p className="text-2xl font-bold text-MentivPurple mb-1">Free</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Join Program</p>
+                  <p className="text-2xl font-bold text-MentivPurple mb-1">
+                    Free
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Join Program
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -330,7 +407,9 @@ const InfoPage = () => {
         {/* LEGAL SECTION */}
         <section id="legal">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Legal & Policies</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Legal & Policies
+            </h2>
             <div className="w-20 h-1 bg-MentivPurple"></div>
           </div>
 
@@ -344,28 +423,39 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Data Collection</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Data Collection
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  We collect information you provide directly (name, email, profile details) and automatically 
-                  (device info, usage patterns, cookies) to improve your learning experience.
+                  We collect information you provide directly (name, email,
+                  profile details) and automatically (device info, usage
+                  patterns, cookies) to improve your learning experience.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Data Usage</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Data Usage
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Your data helps us personalize courses, improve platform features, process payments, 
-                  and communicate important updates. We never sell your personal information.
+                  Your data helps us personalize courses, improve platform
+                  features, process payments, and communicate important updates.
+                  We never sell your personal information.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Data Protection</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Data Protection
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  We use industry-standard encryption and security measures to protect your data. Our servers 
-                  are secure, and we comply with GDPR and other international privacy regulations.
+                  We use industry-standard encryption and security measures to
+                  protect your data. Our servers are secure, and we comply with
+                  GDPR and other international privacy regulations.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Your Rights</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Your Rights
+                </h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -398,9 +488,12 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Account Responsibilities</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Account Responsibilities
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  You are responsible for maintaining account security and all activities under your account.
+                  You are responsible for maintaining account security and all
+                  activities under your account.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-center gap-2">
@@ -422,24 +515,33 @@ const InfoPage = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Course Access</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Course Access
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Purchased courses grant lifetime access for personal use only. You may not redistribute, 
-                  share, or resell course content without explicit permission.
+                  Purchased courses grant lifetime access for personal use only.
+                  You may not redistribute, share, or resell course content
+                  without explicit permission.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Intellectual Property</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Intellectual Property
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  All course content, platform design, and materials are protected by copyright. Instructors 
-                  retain rights to their content while granting Mentiv license to distribute.
+                  All course content, platform design, and materials are
+                  protected by copyright. Instructors retain rights to their
+                  content while granting Mentiv license to distribute.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Termination</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Termination
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  We reserve the right to suspend or terminate accounts that violate our terms, engage in 
-                  fraudulent activity, or abuse platform features.
+                  We reserve the right to suspend or terminate accounts that
+                  violate our terms, engage in fraudulent activity, or abuse
+                  platform features.
                 </p>
               </div>
             </CardContent>
@@ -455,43 +557,60 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, 
-                and personalize content.
+                We use cookies and similar technologies to enhance your browsing
+                experience, analyze site traffic, and personalize content.
               </p>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-3">Types of Cookies We Use</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-3">
+                  Types of Cookies We Use
+                </h3>
                 <div className="space-y-3">
                   <div className="p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Essential Cookies</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      Essential Cookies
+                    </h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Required for platform functionality, login sessions, and security features. Cannot be disabled.
+                      Required for platform functionality, login sessions, and
+                      security features. Cannot be disabled.
                     </p>
                   </div>
                   <div className="p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Analytics Cookies</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      Analytics Cookies
+                    </h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Help us understand how visitors use our platform to improve user experience.
+                      Help us understand how visitors use our platform to
+                      improve user experience.
                     </p>
                   </div>
                   <div className="p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Marketing Cookies</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      Marketing Cookies
+                    </h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Track browsing habits to show relevant ads and measure campaign effectiveness.
+                      Track browsing habits to show relevant ads and measure
+                      campaign effectiveness.
                     </p>
                   </div>
                   <div className="p-4 bg-MentivPurple/5 dark:bg-MentivPurple/10 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Preference Cookies</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      Preference Cookies
+                    </h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Remember your settings like language, theme, and display preferences.
+                      Remember your settings like language, theme, and display
+                      preferences.
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Managing Cookies</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Managing Cookies
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  You can control cookies through your browser settings. Note that blocking certain cookies 
-                  may affect platform functionality.
+                  You can control cookies through your browser settings. Note
+                  that blocking certain cookies may affect platform
+                  functionality.
                 </p>
               </div>
             </CardContent>
@@ -513,7 +632,9 @@ const InfoPage = () => {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Eligibility</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Eligibility
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   You can request a full refund within 30 days of purchase if:
                 </p>
@@ -533,7 +654,9 @@ const InfoPage = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Non-Refundable</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Non-Refundable
+                </h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-center gap-2">
                     <XCircle className="w-4 h-4 text-red-500" />
@@ -550,10 +673,13 @@ const InfoPage = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Refund Process</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">
+                  Refund Process
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  Contact our support team with your order details. Approved refunds are processed within 
-                  5-10 business days to your original payment method.
+                  Contact our support team with your order details. Approved
+                  refunds are processed within 5-10 business days to your
+                  original payment method.
                 </p>
                 <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                   <Clock className="w-5 h-5 text-MentivPurple" />
@@ -573,11 +699,14 @@ const InfoPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Navigate our platform easily with our comprehensive sitemap listing all pages and resources.
+                Navigate our platform easily with our comprehensive sitemap
+                listing all pages and resources.
               </p>
               <div className="grid md:grid-cols-4 gap-4 text-sm">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Learn</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    Learn
+                  </h4>
                   <ul className="space-y-1 text-gray-600 dark:text-gray-400">
                     <li>All Courses</li>
                     <li>Categories</li>
@@ -586,7 +715,9 @@ const InfoPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Teach</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    Teach
+                  </h4>
                   <ul className="space-y-1 text-gray-600 dark:text-gray-400">
                     <li>Become Instructor</li>
                     <li>Instructor Dashboard</li>
@@ -595,7 +726,9 @@ const InfoPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Company</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    Company
+                  </h4>
                   <ul className="space-y-1 text-gray-600 dark:text-gray-400">
                     <li>About Us</li>
                     <li>Careers</li>
@@ -604,7 +737,9 @@ const InfoPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Support</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    Support
+                  </h4>
                   <ul className="space-y-1 text-gray-600 dark:text-gray-400">
                     <li>Help Center</li>
                     <li>Contact Us</li>
@@ -616,7 +751,6 @@ const InfoPage = () => {
             </CardContent>
           </Card>
         </section>
-
       </div>
     </div>
   );

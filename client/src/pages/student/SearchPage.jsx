@@ -102,7 +102,7 @@
 import React, { useState } from "react";
 import SearchResult from "./SearchResult";
 import Filter from "./Filter";
-import SearchBar from "@/components/SearchBar";
+import SearchBar from "@/pages/student/SearchBar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle, SlidersHorizontal, X, TrendingUp, Info } from "lucide-react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";

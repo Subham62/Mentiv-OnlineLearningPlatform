@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const INSTRUCTOR_API = "http://localhost:8000/api/v1/instructor";
+const INSTRUCTOR_API = "https://mentiv-backend.onrender.com/api/v1/instructor";
 
 export const instructorApi = createApi({
   reducerPath: "instructorApi",

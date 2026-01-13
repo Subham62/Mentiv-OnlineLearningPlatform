@@ -5,6 +5,7 @@ import {
   Instagram,
   Youtube,
   Linkedin,
+  Github,
   Mail,
   Phone,
   MapPin,
@@ -17,7 +18,6 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
 const Footer = () => {
-
   const sections = [
     {
       title: "Mentiv",
@@ -33,7 +33,10 @@ const Footer = () => {
     {
       title: "Courses",
       links: [
-        { name: "Web Development", href: "/course/search?query=web-development" },
+        {
+          name: "Web Development",
+          href: "/course/search?query=web-development",
+        },
         { name: "Data Science", href: "/course/search?query=python" },
         { name: "Mobile Development", href: "/course/search?query=mobile" },
         { name: "Business", href: "/course/search?query=business" },
@@ -84,7 +87,7 @@ const Footer = () => {
               Learn from the world's best instructors and transform your career
               with hands-on projects and expert guidance.
             </p>
-            
+
             <div className="space-y-3">
               <h3 className="font-semibold text-base text-gray-800 dark:text-white">
                 Quick Links
@@ -166,7 +169,7 @@ const Footer = () => {
                     Email
                   </p>
                   <a
-                    href="mailto:support@mentiv.com"
+                    href="mailto:subhamchakraborty2002@gmail.com"
                     className="text-gray-800 dark:text-white font-semibold hover:text-MentivPurple transition-colors"
                   >
                     support@mentiv.com
@@ -180,8 +183,7 @@ const Footer = () => {
                     Address
                   </p>
                   <p className="text-gray-800 dark:text-white text-sm max-w-xs leading-relaxed">
-                    3rd Floor, Trident Innovation Center, Infocity Road,
-                    Chandaka Industrial Estate, Bhubaneswar, Odisha 751024
+                    Bhubaneswar, Odisha 751024
                   </p>
                 </div>
               </div>
@@ -196,7 +198,21 @@ const Footer = () => {
               </p>
               <div className="flex gap-3 pt-2">
                 <a
-                  href="#"
+                  href="https://github.com/Subham62/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-gray-700 
+             hover:border-gray-800 dark:hover:border-gray-300 
+             hover:bg-gray-100 dark:hover:bg-gray-700 
+             rounded-xl flex items-center justify-center transition-all duration-200 group"
+                >
+                  <Github
+                    className="w-5 h-5 text-gray-600 dark:text-gray-400 
+                     group-hover:text-gray-900 dark:group-hover:text-white"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100086964987270"
                   className="w-11 h-11 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-gray-700 hover:border-MentivPurple hover:bg-MentivPurple/10 dark:hover:bg-MentivPurple/20 rounded-xl flex items-center justify-center transition-all duration-200 group"
                 >
                   <Facebook className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-MentivPurple" />
@@ -214,7 +230,7 @@ const Footer = () => {
                   <Instagram className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-pink-500 dark:group-hover:text-pink-400" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/subham-chakraborty01/"
                   className="w-11 h-11 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl flex items-center justify-center transition-all duration-200 group"
                 >
                   <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" />

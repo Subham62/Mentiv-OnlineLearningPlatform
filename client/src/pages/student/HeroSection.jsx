@@ -1,4 +1,4 @@
-import HeroSlider from "@/components/HeroSlider";
+import HeroSlider from "@/pages/student/HeroSlider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {

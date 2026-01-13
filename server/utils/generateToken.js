@@ -15,6 +15,7 @@ export const generateToken = (res, user, message) => {
         .status(200)
         .cookie("token", token, {
             httpOnly: true,
+            secure: true,
             sameSite: "strict",
             maxAge: 24*60*60*1000       //  24 hours
         }).json({

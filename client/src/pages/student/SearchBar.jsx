@@ -1,8 +1,8 @@
 import { Search, X } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import { Input } from "../../components/ui/input";
+import { Button } from "../../components/ui/button";
 
 const SearchBar = ({ initialQuery = "", onClear }) => {
   const [searchQuery, setSearchQuery] = useState(initialQuery);
@@ -38,7 +38,7 @@ const SearchBar = ({ initialQuery = "", onClear }) => {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search for courses, categories, or instructors..."
+          placeholder="Search for courses or categories..."
           className="w-full pl-12 pr-24 py-6 text-base border-2 border-gray-200 dark:border-gray-700 rounded-full focus:border-violet-600 dark:focus:border-violet-400 focus-visible:ring-0 focus-visible:ring-offset-0 transition-all"
         />
 

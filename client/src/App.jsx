@@ -25,9 +25,9 @@ import {
 } from "./components/ProtectedRoutes";
 import PurchaseCourseprotectedRoute from "./components/PurchaseCourseProtectedRoute";
 import { ThemeProvider } from "./components/ThemeProvider";
-import PopularSkillsSection from "./components/PopularSkillsSection";
 import BecomeInstructor from "./pages/student/BecomeInstructor";
-import InfoPage from "./components/Info";
+import InfoPage from "./pages/student/Info";
+import PopularSkillsSection from "./pages/student/PopularSkillsSection";
 
 const appRouter = createBrowserRouter([
   {

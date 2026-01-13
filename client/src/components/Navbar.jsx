@@ -83,7 +83,7 @@ const Navbar = () => {
           </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56" align="start">
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuLabel className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-gray-900 dark:text-gray-200 cursor-default">My Account</DropdownMenuLabel>
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
                     <Link to="my-learning">My learning</Link>
@@ -98,7 +98,7 @@ const Navbar = () => {
 
                 {user?.role === "instructor" && (
                   <>
-                    <DropdownMenuSeparator />
+                    <DropdownMenuSeparator className=" bg-gray-200 dark:bg-gray-700" />
                     <DropdownMenuItem>
                       <Link to="/admin/dashboard">Dashboard</Link>
                     </DropdownMenuItem>
