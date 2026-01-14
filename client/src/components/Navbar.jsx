@@ -53,7 +53,6 @@ const Navbar = () => {
       {/* Desktop */}
       <div className="max-w-7xl mx-auto hidden md:flex justify-between items-center gap-10 h-full">
         <div className="flex gap-2 items-center">
-          {/* <School size={"20"} /> */}
           <img
             src={Logo}
             alt="Mentiv Logo"
@@ -69,18 +68,17 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <div className="flex flex-row">
-            <Avatar>
-              <AvatarImage
-                src={user?.photoUrl || "https://github.com/shadcn.png"}
-                alt="@shadcn"
-              />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-
-            <p className="font-bold text-base sm:text-lg text-center mx-4 my-3">
-              {user.name}
-            </p>
-          </div>
+                  <Avatar>
+                    <AvatarImage
+                      src={user?.photoUrl || "https://github.com/shadcn.png"}
+                      alt="@shadcn"
+                    />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <p className="font-bold text-base sm:text-lg text-center mx-4 my-3">
+                    {user.name}
+                  </p>
+                </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56" align="start">
                 <DropdownMenuLabel className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-gray-900 dark:text-gray-200 cursor-default">My Account</DropdownMenuLabel>
@@ -117,19 +115,31 @@ const Navbar = () => {
           <Darkmode />
         </div>
       </div>
+      
       {/* Mobile devices */}
       <div className="flex md:hidden items-center justify-between px-4 h-full">
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2 "> */}
+        <div className="flex gap-2 items-center">
           <img
             src={Logo}
             alt="Mentiv Logo"
             className="w-8 h-8 object-contain rounded-md"
           />
-        <Link to="/">
-          <h1 className="font-extrabold text-2xl">Mentiv</h1>
-        </Link>
+          <Link to="/">
+            <h1 className="font-extrabold text-2xl">Mentiv</h1>
+          </Link>
         </div>
-        <MobileNavbar user={user} />
+        {user ? (
+          <MobileNavbar user={user} logoutHandler={logoutHandler} />
+        ) : (
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => navigate("/login")}>
+              Login
+            </Button>
+            <Button size="sm" onClick={() => navigate("/login")}>Signup</Button>
+            <Darkmode />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -137,9 +147,11 @@ const Navbar = () => {
 
 export default Navbar;
 
-const MobileNavbar = ({ user }) => {
+const MobileNavbar = ({ user, logoutHandler }) => {
   const firstName = user?.name.split(" ")[0];
   // const role = "instructor";
+  // const navigate = useNavigate();
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -149,8 +161,6 @@ const MobileNavbar = ({ user }) => {
       </SheetTrigger>
       <SheetContent className="flex flex-col ">
         <SheetHeader className="flex flex-row items-center justify-between mt-2">
-          {/* <SheetTitle>Edemy</SheetTitle> */}
-
           <div className="flex flex-row">
             <Avatar>
               <AvatarImage
@@ -175,18 +185,20 @@ const MobileNavbar = ({ user }) => {
           <span>
             <Link to="profile">Edit profile</Link>
           </span>
-          <p>Log Out</p>
+          <p onClick={logoutHandler} className="cursor-pointer hover:text-red-500">
+            Log Out
+          </p>
         </nav>
         {user?.role === "instructor" && (
           <SheetFooter>
             <SheetClose asChild>
               <div className="flex flex-col">
                 <Button type="submit">
-                <Link to="/admin/dashboard">Dashboard</Link>
-              </Button>
-              <Button type="submit" className="mt-2">
-                <Link to="/admin/course">Courses</Link>
-              </Button>
+                  <Link to="/admin/dashboard">Dashboard</Link>
+                </Button>
+                <Button type="submit" className="mt-2">
+                  <Link to="/admin/course">Courses</Link>
+                </Button>
               </div>
             </SheetClose>
           </SheetFooter>
